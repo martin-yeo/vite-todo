@@ -1,6 +1,6 @@
 import { useState } from 'react';
 
-function TodoInsert( onInsert ) {
+function TodoInsert( { onInsert } ) {
   
   const [text, setText] = useState('')
 
