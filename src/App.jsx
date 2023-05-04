@@ -1,8 +1,15 @@
+import TodoInsert from "./components/TodoInsert"
+import TodoList from "./components/TodoList"
+
+
+
 function App() {
   return (
-    <>
-      목원대 투두 만들기
-    </>
+    <div>
+      <TodoInsert />
+      <TodoList />
+
+    </div>
   )
 }
 
