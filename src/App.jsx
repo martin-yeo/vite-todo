@@ -8,7 +8,7 @@ function App() {
 
   return (
     <>
-      testgit
+      목원대 투두 만들기
     </>
   )
 }
