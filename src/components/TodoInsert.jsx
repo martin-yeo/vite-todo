@@ -5,6 +5,7 @@ function TodoInsert( onInsert ) {
   const [text, setText] = useState('')
 
   const onChange = (e) => {
+    console.log(e.target.value)
     setText(e.target.value)
   }
 

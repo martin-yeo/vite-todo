@@ -26,11 +26,13 @@ function App() {
 
   const onInsert = (text) => {
     setTodos(
-      todos.concat({
-        id: todos.length + 1,
-        text,
-        checked: false,
-      })
+      todos.concat([
+        {
+          id: todos.length + 1,
+          text,
+          checked: false
+        }
+      ])
     )
   }
 
@@ -49,7 +51,7 @@ function App() {
   return (
     <TodoTemplates>
       <TodoInsert onInsert={onInsert}/>
-      <TodoList todos={todos} onDelete={onDelete} onToggle={onToggle} onInsert={onInsert}/>
+      <TodoList todos={todos} onDelete={onDelete} onToggle={onToggle}/>
     </TodoTemplates>
   )
 }
