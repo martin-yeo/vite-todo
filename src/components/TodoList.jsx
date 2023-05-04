@@ -1,7 +1,16 @@
-function TodoList() {
-  return ( 
+import TodoListItem from "./TodoListItem";
+
+function TodoList({todos, onDelete, onToggle}) {
+  return (  
     <div>
-      TodoList
+      {todos.map(todo => (
+        <TodoListItem 
+          key={todo.id}
+          todo={todo}
+          onDelete={onDelete}
+          onToggle={onToggle}
+        />
+      ))}
     </div>
   );
 }

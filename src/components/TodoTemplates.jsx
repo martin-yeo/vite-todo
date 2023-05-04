@@ -1,7 +1,9 @@
-function TodoTemplates() {
+function TodoTemplates({children}) {
   return ( 
     <div>
-      test
+      📕
+      {children}
+      ✔
     </div>
    );
 }
