@@ -1,7 +1,7 @@
 import { useState } from "react"
 import TodoInsert from "./components/TodoInsert"
 import TodoList from "./components/TodoList"
-import TodoTemplates from "./components/Todotemplates"
+import TodoTemplates from "./components/TodoTemplates"
 
 
 
