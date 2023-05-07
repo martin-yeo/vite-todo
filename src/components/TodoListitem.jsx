@@ -4,7 +4,7 @@ function TodoListItem({todo, onDelete, onToggle}) {
   return ( 
     <div style={{ textDecoration: checked ? 'line-through' : 'none'}}>
       <input type="checkbox" checked={checked} onChange={() => onToggle(id)}/>
-      {id}<span>{text}</span>
+      {id}.<span> {text} </span>
       <button onClick={() => onDelete(id)}>삭제</button>
     </div>
   );

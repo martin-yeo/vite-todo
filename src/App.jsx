@@ -1,7 +1,7 @@
-import { useState } from "react"
+import { useRef, useState } from "react"
 import TodoInsert from "./components/TodoInsert"
 import TodoList from "./components/TodoList"
-import TodoTemplates from "./components/TodoTemplates"
+import TodoTemplates from "./components/Todotemplates"
 
 
 
@@ -9,26 +9,28 @@ function App() {
   const [todos, setTodos] = useState([
     {
       id: 1,
-      text: '공부하기',
+      text: '운동',
       checked: true,
     },
     {
       id: 2,
-      text: '복습하기',
-      checked: true,
+      text: '출근',
+      checked: false,
     },
     {
       id: 3,
-      text: '운동하기',
+      text: '커피',
       checked: false,
     }
   ])
+
+  const nextId = useRef(3)
 
   const onInsert = (text) => {
     setTodos(
       todos.concat([
         {
-          id: todos.length + 1,
+          id: ++nextId.current,
           text,
           checked: false
         }

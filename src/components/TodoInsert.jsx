@@ -5,14 +5,16 @@ function TodoInsert( { onInsert } ) {
   const [text, setText] = useState('')
 
   const onChange = (e) => {
-    console.log(e.target.value)
+    // console.log(e.target.value)
     setText(e.target.value)
   }
 
   const onSubmit = (e) => {
-    onInsert(text)
-    setText('')
-    e.preventDefault()
+    if (text.trim() != "") {
+      onInsert(text)
+      setText('')
+    }
+    e.preventDefault()    
   }
 
   return ( 
